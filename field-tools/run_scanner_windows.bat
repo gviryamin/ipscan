@@ -8,6 +8,11 @@ echo.
 echo The scanner runs locally on this laptop.
 echo Browser address: http://127.0.0.1:8765
 echo.
+echo Multi-range examples:
+echo 192.168.1.0/24
+echo 192.168.1.10-192.168.1.50
+echo 172.19.1.0-172.19.65.0/24
+echo.
 echo Use only on networks you are authorized to scan.
 echo.
 
@@ -20,5 +25,5 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-python field-tools\site_network_scanner.py
+python field-tools\site_network_scanner_multi_range.py
 pause
